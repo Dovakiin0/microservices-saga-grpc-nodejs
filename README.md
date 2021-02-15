@@ -10,11 +10,14 @@ Postgres is used for database.
 
 First fork this repository  
 or clone directly with HTTPS
-> git clone https://github.com/Dovakiin0/microservices-saga-grpc-nodejs.git
+```
+git clone https://github.com/Dovakiin0/microservices-saga-grpc-nodejs.git
+```
 
 or SSH
-> git clone git@github.com:Dovakiin0/microservices-saga-grpc-nodejs.git
-
+```
+git clone git@github.com:Dovakiin0/microservices-saga-grpc-nodejs.git
+```
 Fill in the environment variable for your respective postgres details inside docker-compose.yml.  
 Currently for two services two postges database are used in port 5433, 5434  
 
