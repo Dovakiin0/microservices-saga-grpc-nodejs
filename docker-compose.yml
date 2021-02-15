@@ -6,12 +6,12 @@ services:
       context: ./auth_service
       dockerfile: Dockerfile
     environment:
-      - DB_HOST=auth_db
-      - DB_NAME=auth_service
-      - DB_USER=postgres
-      - DB_PASS=postgresadmin
+      - DB_HOST=
+      - DB_NAME=
+      - DB_USER=
+      - DB_PASS=
       - DB_PORT=5432
-      - JWT_PRIVATE_KEY=secretctring
+      - JWT_PRIVATE_KEY=
     depends_on:
       - auth_db
     links:
@@ -32,9 +32,9 @@ services:
     ports:
       - "5433:5432"
     environment:
-      - POSTGRES_DB=auth_service
-      - POSTGRES_PASSWORD=postgresadmin
-      - POSTGRES_USER=postgres
+      - POSTGRES_DB=
+      - POSTGRES_PASSWORD=
+      - POSTGRES_USER=
 
   todo_service:
     container_name: "todo_service"
@@ -46,10 +46,10 @@ services:
     links:
       - rabbitmq
     environment:
-      - DB_HOST=todo_db
-      - DB_NAME=todo_service
-      - DB_USER=postgres
-      - DB_PASS=postgresadmin
+      - DB_HOST=
+      - DB_NAME=
+      - DB_USER=
+      - DB_PASS=
       - DB_PORT=5432
 
   todo_db:
@@ -59,9 +59,9 @@ services:
     ports:
       - "5434:5432"
     environment:
-      - POSTGRES_DB=todo_service
-      - POSTGRES_PASSWORD=postgresadmin
-      - POSTGRES_USER=postgres
+      - POSTGRES_DB=
+      - POSTGRES_PASSWORD=
+      - POSTGRES_USER=
 
   rabbitmq:
     image: rabbitmq:3-management
