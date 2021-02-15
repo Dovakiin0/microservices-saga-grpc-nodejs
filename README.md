@@ -59,5 +59,5 @@ If you change your username then auth_service throws an event called *USERNAME_C
 
 <br/>
 
-Feel free to tweak the code according to your needs, and don't feel hesitated to open any issue or ask any improvements. I'll be sure to respond to you actively.  
+Feel free to tweak the code according to your needs, and don't feel hesitated to open any issue or advice me any improvements. I'll be sure to respond to you actively.  
 If you like it, please leave a **STAR**.
