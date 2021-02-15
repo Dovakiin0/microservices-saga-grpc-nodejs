@@ -27,6 +27,11 @@ Go inside each service then run
 for migration, cd to auth_service and todo_service then run
 > npx sequelize-cli db:migrate
 
+Alternately (preferable), 
+> docker exec -it <container_name_of_service> bash
+
+> npx sequelize-cli db:migrate
+
 To start:
 > docker-compose up -d
 
