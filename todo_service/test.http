@@ -2,11 +2,11 @@ GET http://localhost:3000/v1/todo
 ###
 POST http://localhost:3000/v1/todo
 Content-Type: application/json
-x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJEb3Zha2lpbjAiLCJlbWFpbCI6ImRvdmFAa2lpbi5jb20iLCJpYXQiOjE2MTI4NjM2NjF9.nn-H7tpX_MiT3b3OB4ePpKCbOVpzLFq6U89MfmY0YmY
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJiaXNoYWwiLCJlbWFpbCI6ImJpc2hhbEBzdWJlZGkuY29tIiwiaWF0IjoxNjEzMzc2NzMxfQ.ZB2iiyoGMkNC_t-wbVruAlYWxhHQ2XOowmtAE_9bglY
 
 {
-    "title": "NEW hello",
-    "description": "Unity",
+    "title": "test another user",
+    "description": "docker",
     "end_date": "2021-20-20"
 }
 ###

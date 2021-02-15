@@ -2,7 +2,7 @@ const amqp = require("amqplib/callback_api");
 
 module.exports = (old, newUser) => {
   let msg = { oldUser: old, newUser: newUser };
-  amqp.connect("amqp://localhost:5672", (err, connection) => {
+  amqp.connect("amqp://rabbitmq:5672", (err, connection) => {
     if (err) throw err;
     connection.createChannel((err, channel) => {
       if (err) throw err;

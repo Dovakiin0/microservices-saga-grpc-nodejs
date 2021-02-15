@@ -14,6 +14,8 @@ services:
       - JWT_PRIVATE_KEY=secretctring
     depends_on:
       - auth_db
+    links:
+      - rabbitmq
 
   client_service:
     container_name: "client_service"
@@ -41,6 +43,8 @@ services:
       dockerfile: Dockerfile
     depends_on:
       - todo_db
+    links:
+      - rabbitmq
     environment:
       - DB_HOST=todo_db
       - DB_NAME=todo_service
@@ -58,3 +62,10 @@ services:
       - POSTGRES_DB=todo_service
       - POSTGRES_PASSWORD=postgresadmin
       - POSTGRES_USER=postgres
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"

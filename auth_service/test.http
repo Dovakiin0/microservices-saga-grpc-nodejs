@@ -2,7 +2,7 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "email": "dova@kiin.com",
+    "email": "bishal@subedi.com",
     "password": "newestpassword"
 }
 ###
@@ -10,8 +10,8 @@ POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-    "username": "Dovakiin0",
-    "email": "dova@kiin.com",
+    "username": "bishal",
+    "email": "bishal@subedi.com",
     "password": "newestpassword"
 }
 ###
@@ -22,14 +22,14 @@ Content-Type: application/json
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJEb3Zha2lpbjAiLCJlbWFpbCI6ImRvdmFAa2lpbi5jb20iLCJpYXQiOjE2MTI3ODQ5NTh9.ASXvOniXv5VqVqq9JqYwH0pXBi10zcCrKEMeM6VDv5w"
 }
 ###
-PUT http://localhost:3000/auth/update/1
+PUT http://localhost:3000/auth/update/2
 Content-Type: application/json
 
 {
-    "username": "helloworldddd"
+    "username": "Dovakiin0._"
 }
 
 ###
 GET http://localhost:3000/test
 ###
-GET http://localhost:3000/auth/1   
+GET http://localhost:3000/auth/2  
