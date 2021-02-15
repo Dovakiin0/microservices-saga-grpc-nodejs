@@ -1,0 +1,28 @@
+GET http://localhost:3000/v1/todo
+###
+POST http://localhost:3000/v1/todo
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJEb3Zha2lpbjAiLCJlbWFpbCI6ImRvdmFAa2lpbi5jb20iLCJpYXQiOjE2MTI4NjM2NjF9.nn-H7tpX_MiT3b3OB4ePpKCbOVpzLFq6U89MfmY0YmY
+
+{
+    "title": "NEW hello",
+    "description": "Unity",
+    "end_date": "2021-20-20"
+}
+###
+POST http://localhost:3000/v1/todo/1
+###
+PUT http://localhost:3000/v1/todo/1
+Content-Type: application/json
+
+{
+    "title": "new title v4",
+    "description": "new description v4",
+    "end_date": "2020-20-30"
+}
+###
+DELETE http://localhost:3000/v1/todo/1
+
+###
+GET http://localhost:3000/token-test
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJkb3Zha2lpbjAiLCJlbWFpbCI6ImRvdmFAa2lpbi5jb20iLCJpYXQiOjE2MTI2MDgyNzR9.al4J1xM3AUuCt0qxAycaZSu8gCSzM95lEFm2oYaxeJo

@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+package Authentication;
+
+service Auth {
+    //test
+    rpc test(testrequest) returns (testresponse) {}
+
+    rpc login(loginDetails) returns (userResponse){}
+    rpc register(signupDetails) returns (success) {}
+    rpc verify(verifyRequest) returns (verifyResponse) {}
+    rpc getUser(getUserRequest) returns (verifyResponse) {}
+    rpc update(usernameUpdate) returns (verifyResponse) {}
+
+}
+
+//test message
+message testrequest {
+    string message = 1;
+}
+// test end
+message testresponse {
+    string message = 1;
+}
+
+message loginDetails {
+    string email = 1;
+    string password = 2;
+}
+
+message signupDetails {
+    string username = 1;
+    string email = 2;
+    string password = 3;
+}
+
+message verifyRequest {
+    string token = 1;
+}
+
+message success {
+    string status = 1;
+}
+
+message userResponse {
+    string status = 1;
+    string token = 2;
+}
+
+message verifyResponse {
+    int32 id =1;
+    string username = 2;
+    string email = 3;
+}
+
+message getUserRequest {
+    int32 id = 1;   
+}
+
+message usernameUpdate{
+    int32 id = 1;
+    string username = 2;
+}

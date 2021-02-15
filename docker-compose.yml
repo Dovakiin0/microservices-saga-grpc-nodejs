@@ -1,0 +1,60 @@
+version: "3"
+services:
+  auth_service:
+    container_name: "auth_service"
+    build:
+      context: ./auth_service
+      dockerfile: Dockerfile
+    environment:
+      - DB_HOST=auth_db
+      - DB_NAME=auth_service
+      - DB_USER=postgres
+      - DB_PASS=postgresadmin
+      - DB_PORT=5432
+      - JWT_PRIVATE_KEY=secretctring
+    depends_on:
+      - auth_db
+
+  client_service:
+    container_name: "client_service"
+    build:
+      context: ./client_service
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+
+  auth_db:
+    image: postgres:latest
+    restart: always
+    container_name: "auth_db"
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_DB=auth_service
+      - POSTGRES_PASSWORD=postgresadmin
+      - POSTGRES_USER=postgres
+
+  todo_service:
+    container_name: "todo_service"
+    build:
+      context: ./todo_service
+      dockerfile: Dockerfile
+    depends_on:
+      - todo_db
+    environment:
+      - DB_HOST=todo_db
+      - DB_NAME=todo_service
+      - DB_USER=postgres
+      - DB_PASS=postgresadmin
+      - DB_PORT=5432
+
+  todo_db:
+    image: postgres:latest
+    restart: always
+    container_name: "todo_db"
+    ports:
+      - "5434:5432"
+    environment:
+      - POSTGRES_DB=todo_service
+      - POSTGRES_PASSWORD=postgresadmin
+      - POSTGRES_USER=postgres
