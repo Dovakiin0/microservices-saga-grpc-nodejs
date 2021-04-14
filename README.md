@@ -55,7 +55,7 @@ Client_service acts as a API gateway for communicating with two services.
 
 ### EVENTS
 **RabbbitMq** is used for event management. Only one event is published and subscribed throughout this app.  
-If you change your username then auth_service throws an event called *USERNAME_CHANGE_EVENT* and it is subscribed by the todo_service which then changes all the username in respective TODOs.
+when you change your username, auth_service throws an event called *USERNAME_CHANGE_EVENT* and it is subscribed by the todo_service which then changes all the username in its respective TODOs.
 
 <br/>
 
