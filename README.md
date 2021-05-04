@@ -3,7 +3,7 @@
 [![Generic badge](https://img.shields.io/badge/LICENSE-MIT-blue.svg)](https://shields.io/)
 
 
-## Microservices-Saga-Nodejs
+## Microservices-Saga-Nodejs-gRPC
 A basic implementation of microservices with event based system to create saga architecture.  
 Currently, this has no UI and you can only test it with postman or any alternative.  
 Postgres is used for database.  
@@ -60,4 +60,3 @@ when you change your username, auth_service throws an event called *USERNAME_CHA
 <br/>
 
 Feel free to tweak the code according to your needs, and don't feel hesitated to open any issue or advice me any improvements. I'll be sure to respond to you actively.  
-If you like it, please leave a **STAR**.
